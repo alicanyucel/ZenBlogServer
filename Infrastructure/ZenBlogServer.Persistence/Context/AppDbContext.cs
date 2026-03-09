@@ -3,8 +3,12 @@ using ZenBlogServer.Domain.Entities;
 
 namespace ZenBlogServer.Persistence.Context;
 
-public class AppDbContext(DbContextOptions options) : DbContext(options)
+public class AppDbContext : DbContext
 {
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+    {
+    }
+
     public DbSet<ContactInfo> Contacts { get; set; }
     public DbSet<Category> Categories { get; set; }
     public DbSet<Blog> Blogs    { get; set; }

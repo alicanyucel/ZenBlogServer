@@ -12,8 +12,8 @@ using ZenBlogServer.Persistence.Context;
 namespace ZenBlogServer.Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260309152607_mg4378473843")]
-    partial class mg4378473843
+    [Migration("20260309153737_mg348394934121233")]
+    partial class mg348394934121233
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -35,7 +35,7 @@ namespace ZenBlogServer.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("CategoryId1")
+                    b.Property<Guid>("CategoryId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("CoverImage")
@@ -58,7 +58,7 @@ namespace ZenBlogServer.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryId1");
+                    b.HasIndex("CategoryId");
 
                     b.ToTable("Blogs");
                 });
@@ -186,7 +186,7 @@ namespace ZenBlogServer.Persistence.Migrations
                 {
                     b.HasOne("ZenBlogServer.Domain.Entities.Category", "Category")
                         .WithMany("Blogs")
-                        .HasForeignKey("CategoryId1")
+                        .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

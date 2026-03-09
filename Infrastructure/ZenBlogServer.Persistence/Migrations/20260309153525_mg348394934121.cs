@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ZenBlogServer.Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class mg4378473843 : Migration
+    public partial class mg348394934121 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -85,7 +85,7 @@ namespace ZenBlogServer.Persistence.Migrations
                     CoverImage = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BlogImage = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CategoryId1 = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CategoryId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -93,17 +93,17 @@ namespace ZenBlogServer.Persistence.Migrations
                 {
                     table.PrimaryKey("PK_Blogs", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Blogs_Categories_CategoryId1",
-                        column: x => x.CategoryId1,
+                        name: "FK_Blogs_Categories_CategoryId",
+                        column: x => x.CategoryId,
                         principalTable: "Categories",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Blogs_CategoryId1",
+                name: "IX_Blogs_CategoryId",
                 table: "Blogs",
-                column: "CategoryId1");
+                column: "CategoryId");
         }
 
         /// <inheritdoc />
