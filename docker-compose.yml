@@ -12,7 +12,7 @@ services:
   api:
     build:
       context: .
-      dockerfile: Presentation/ZenBlogServer.Api/Dockerfile
+      dockerfile: Dockerfile
     depends_on:
       - db
     environment:
