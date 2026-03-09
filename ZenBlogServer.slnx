@@ -8,6 +8,6 @@
     <Project Path="Infrastructure/ZenBlogServer.Persistence/ZenBlogServer.Persistence.csproj" />
   </Folder>
   <Folder Name="/Presentation/">
-    <Project Path="Presentation/ZenBlogServer.WebApi/ZenBlogServer.WebApi.csproj" />
+    <Project Path="Presentation/ZenBlogServer.Api/ZenBlogServer.Api.csproj" />
   </Folder>
 </Solution>
