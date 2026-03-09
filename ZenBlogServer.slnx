@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/Core/">
+    <Project Path="Core/ZenBlogServer.Application/ZenBlogServer.Application.csproj" />
+    <Project Path="Core/ZenBlogServer.Domain/ZenBlogServer.Domain.csproj" />
+  </Folder>
+  <Folder Name="/Infrastructure/">
+    <Project Path="Infrastructure/ZenBlogServer.Infrastructure/ZenBlogServer.Infrastructure.csproj" />
+    <Project Path="Infrastructure/ZenBlogServer.Persistence/ZenBlogServer.Persistence.csproj" />
+  </Folder>
+  <Folder Name="/Presentation/">
+    <Project Path="ZenBlogServer.WebApi/ZenBlogServer.WebApi.csproj" />
+  </Folder>
+</Solution>
